@@ -1,0 +1,60 @@
+GITHUB FILE UPLOAD COMMANDS FROM CMD
+
+1. Project folder me jao:
+cd C:\Users\Np\Desktop\MyProject
+
+2. Git initialize karo:
+git init
+
+3. Sabhi files add karo:
+git add .
+
+4. Commit karo:
+git commit -m "Initial commit"
+
+5. Main branch set karo:
+git branch -M main
+
+6. GitHub repository connect karo:
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+
+7. Files GitHub par upload/push karo:
+git push -u origin main
+
+
+NEW FILES / UPDATED FILES UPLOAD KARNE KE LIYE
+
+cd C:\Users\Np\Desktop\MyProject
+git add .
+git commit -m "Update files"
+git push
+
+
+SIRF EK FILE UPLOAD KARNE KE LIYE
+
+git add filename.html
+git commit -m "Add file"
+git push
+
+
+AGAR GITHUB CLI SE DIRECT REPOSITORY CREATE KARKE UPLOAD KARNA HO
+
+gh --version
+gh auth login
+
+cd C:\Users\Np\Desktop\MyProject
+git init
+git add .
+git commit -m "Initial commit"
+gh repo create MyProject --public --source=. --remote=origin --push
+
+
+PRIVATE REPOSITORY KE LIYE
+
+gh repo create MyProject --private --source=. --remote=origin --push
+
+
+IMPORTANT:
+USERNAME ko apne GitHub username se replace karo.
+REPOSITORY ko apne GitHub repository name se replace karo.
+MyProject aur folder path ko apne project ke naam/path se replace karo.
