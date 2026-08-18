@@ -1,0 +1,36 @@
+CREATE TABLE student_data( s_id NUMBER(3) PRIMARY KEY, s_nm VARCHAR2(30),per NUMBER(5,2), class CHAR(1), DOB DATE, city VARCHAR2(20));
+
+INSERT INTO student_data VALUES (101,'Amit',78.50,'A','15-MAY-2004','Rajkot');
+
+INSERT INTO student_data VALUES (102,'Bhavya',82.00,'B','20-JUN-2005','Amreli');
+
+INSERT INTO student_data VALUES (103,'Darshan',65.75,'A','12-JAN-2004','Surat');
+
+INSERT INTO student_data VALUES (104,'Deep',49.00,'B','08-MAR-2005','Amreli');
+
+INSERT INTO student_data VALUES (105,'Esha',91.50,'A','25-SEP-2004','Ahmedabad');
+
+INSERT INTO student_data VALUES (106,'Divya',55.00,'C','30-NOV-2005','Surat');
+
+INSERT INTO student_data VALUES (107,'Krishna',47.50,'B','18-FEB-2004','Junagadh');
+
+INSERT INTO student_data VALUES (108,'Dhruv',88.00,'A','10-DEC-2005','Amreli');
+
+INSERT INTO student_data VALUES (109,'Meera',73.25,'C','05-JUL-2004','Bhavnagar');
+
+INSERT INTO student_data VALUES (110,'Dev',69.00,'B','22-AUG-2005','Surat');
+
+SELECT * FROM student_data;
+UPDATE student_dataSET class = 'A'WHERE city = 'Surat';
+DELETE FROM student_data WHERE per < 50;
+SELECT *FROM student_dataORDER BY per ASC;
+SELECT DISTINCT class FROM student_data;
+SELECT *
+FROM student_data WHERE s_nm LIKE 'D%';
+SELECT class, AVG(per) AS average_percentage
+FROM student_data GROUP BY class;
+SELECT *
+FROM student_data WHERE EXTRACT(YEAR FROM DOB) BETWEEN 2004 AND 2005;
+SELECT * FROM student_data WHERE city = 'Amreli' AND class = 'B';
+ALTER TABLE student_data ADD mobile_no VARCHAR2(10);
+DESC student_data;
