@@ -1,0 +1,12 @@
+DECLARE
+    AGE NUMBER := 10;
+BEGIN
+    IF AGE < 5 THEN
+        DBMS_OUTPUT.PUT_LINE('Free Ticket');
+    ELSIF AGE <= 12 THEN
+        DBMS_OUTPUT.PUT_LINE('Child Ticket');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('Full Ticket');
+    END IF;
+END;
+/
