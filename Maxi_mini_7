@@ -1,0 +1,31 @@
+DECLARE
+    a NUMBER;
+    b NUMBER;
+    c NUMBER;
+    maximum NUMBER;
+    minimum NUMBER;
+BEGIN
+    a := &a;
+    b := &b;
+    c := &c;
+
+    IF a > b AND a > c THEN
+        maximum := a;
+    ELSIF b > a AND b > c THEN
+        maximum := b;
+    ELSE
+        maximum := c;
+    END IF;
+
+    IF a < b AND a < c THEN
+        minimum := a;
+    ELSIF b < a AND b < c THEN
+        minimum := b;
+    ELSE
+        minimum := c;
+    END IF;
+
+    DBMS_OUTPUT.PUT_LINE('Maximum = ' || maximum);
+    DBMS_OUTPUT.PUT_LINE('Minimum = ' || minimum);
+END;
+/
